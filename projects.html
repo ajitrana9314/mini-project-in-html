@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Code With Ajit</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #06142e, #0b3d91, #00a8ff);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 23px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d9ff;
+        }
+
+        /* Main */
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 25px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .heading h1 {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .heading p {
+            font-size: 18px;
+            color: #d9efff;
+        }
+
+        /* Project Grid */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 28px;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        .card h2 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            color: #e4f5ff;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 10px;
+            margin: 4px;
+            border-radius: 20px;
+            background: rgba(0, 168, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 13px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #00a8ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0077cc;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Mobile */
+        @media (max-width: 850px) {
+
+            .projects {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .heading h1 {
+                font-size: 34px;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+
+            <div class="logo">
+                <img src="./image.png" alt="Code With Ajit Logo">
+                <span>Code With Ajit</span>
+            </div>
+
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./media.html">Media</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Projects -->
+    <main class="container">
+
+        <div class="heading">
+            <h1>My Projects 💻</h1>
+            <p>Some of my learning and practical projects</p>
+        </div>
+
+
+        <div class="projects">
+
+            <!-- Project 1 -->
+            <div class="card">
+
+                <div class="icon">🌐</div>
+
+                <h2>HTML Mini Project</h2>
+
+                <p>
+                    A complete HTML website created for learning
+                    and practical work. It contains multiple pages,
+                    forms, tables, images, audio and video.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </div>
+
+                <a href="https://github.com/ajitrana9314/mini-project-in-html"
+                   target="_blank"
+                   class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="card">
+
+                <div class="icon">👨‍💻</div>
+
+                <h2>Personal Portfolio</h2>
+
+                <p>
+                    My personal portfolio website containing
+                    my introduction, skills, projects and
+                    contact information.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Web Design</span>
+                </div>
+
+                <a href="./index.html" class="btn">
+                    Open Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="card">
+
+                <div class="icon">📱</div>
+
+                <h2>Social Media Website</h2>
+
+                <p>
+                    A social media application concept with
+                    login, signup, profile, posts, likes,
+                    comments and user management.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span>
+                </div>
+
+                <a href="#" class="btn">
+                    Coming Soon
+                </a>
+
+            </div>
+
+
+            <!-- Project 4 -->
+            <div class="card">
+
+                <div class="icon">🗄️</div>
+
+                <h2>DBMS Project</h2>
+
+                <p>
+                    Database related practical project
+                    covering tables, queries, relationships
+                    and database management concepts.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">DBMS</span>
+                    <span class="tag">SQL</span>
+                </div>
+
+                <a href="#" class="btn">
+                    Coming Soon
+                </a>
+
+            </div>
+
+
+            <!-- Project 5 -->
+            <div class="card">
+
+                <div class="icon">☕</div>
+
+                <h2>Java Projects</h2>
+
+                <p>
+                    Java programming projects created while
+                    learning OOP, inheritance, interfaces,
+                    exceptions and other concepts.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">OOP</span>
+                </div>
+
+                <a href="#" class="btn">
+                    Coming Soon
+                </a>
+
+            </div>
+
+
+            <!-- Project 6 -->
+            <div class="card">
+
+                <div class="icon">⚙️</div>
+
+                <h2>C / C++ Projects</h2>
+
+                <p>
+                    Programming projects based on C and C++
+                    including arrays, functions, pointers,
+                    data structures and OOP.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">C</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">DSA</span>
+                </div>
+
+                <a href="#" class="btn">
+                    Coming Soon
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Code With Ajit. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

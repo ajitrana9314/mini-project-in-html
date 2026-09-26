@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code With Ajit - HTML Webpage</title>
+
+    <style>
+
+        /* ---------- BASIC ---------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(135deg, #06142e, #0b3d91, #00a8ff);
+
+            color: white;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            margin: 15px;
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 18px;
+
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* ---------- LOGO ---------- */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            object-fit: cover;
+
+            border: 2px solid white;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: #0755b5;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------- HERO ---------- */
+
+        section {
+            min-height: calc(100vh - 160px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 7%;
+        }
+
+
+        .hero {
+            width: 100%;
+            max-width: 1150px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 50px;
+        }
+
+
+        /* ---------- LEFT CONTENT ---------- */
+
+        .content {
+            flex: 1;
+        }
+
+
+        .content h1 {
+            font-size: 52px;
+
+            margin: 0 0 20px;
+
+            line-height: 1.1;
+
+            background: linear-gradient(
+                90deg,
+                #ffffff,
+                #8ed8ff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .content h1 span {
+            color: #00d4ff;
+        }
+
+
+        .content p {
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #dcecff;
+
+            max-width: 600px;
+        }
+
+
+        .content h3 {
+            font-size: 24px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* ---------- BUTTON ---------- */
+
+        .learn-btn {
+            margin-top: 15px;
+
+            padding: 13px 28px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: white;
+            color: #0755b5;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .learn-btn:hover {
+            transform: translateY(-4px) scale(1.03);
+
+            box-shadow:
+                0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* ---------- IMAGE CARD ---------- */
+
+        .image-card {
+            flex: 1;
+
+            text-align: center;
+
+            padding: 20px;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(15px);
+
+            border-radius: 25px;
+
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.3);
+
+            transition: 0.4s;
+        }
+
+
+        .image-card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .image-card img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+
+            border-radius: 18px;
+
+            display: block;
+
+            margin: auto;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .image-card h3 {
+            margin-bottom: 0;
+
+            color: white;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            padding: 15px;
+
+            text-align: center;
+
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+
+        footer hr {
+            border: none;
+
+            height: 1px;
+
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+
+        footer p {
+            margin: 10px 0;
+
+            color: #dcecff;
+        }
+
+
+        /* ---------- MOBILE RESPONSIVE ---------- */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+
+            nav {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            section {
+                padding: 30px 20px;
+            }
+
+
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .content h1 {
+                font-size: 38px;
+            }
+
+
+            .content p {
+                font-size: 16px;
+            }
+
+
+            .image-card {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="./index.html">
+                <img src="./image.png" alt="Code With Ajit">
+            </a>
+
+            <span>Code With Ajit</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="./index.html">Home</a>
+
+            <a href="./about.html">About</a>
+
+            <a href="./projects.html">Projects</a>
+
+            <a href="./contact.html">Contact</a>
+
+            <a href="./media.html">Media</a>
+
+            <a href="./login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- HERO SECTION -->
+
+    <section>
+
+        <div class="hero">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="content">
+
+                <h1>
+                    Welcome to
+                    <br>
+                    <span>My Website</span>
+                </h1>
+
+
+                <p>
+                    This is a simple and modern webpage created
+                    using HTML and CSS.
+                </p>
+
+
+                <h3>
+                    Our Mission
+                </h3>
+
+
+                <p>
+                    To provide high-quality content and resources
+                    for web development enthusiasts.
+                </p>
+
+
+                <button class="learn-btn">
+                    Learn More →
+                </button>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="image-card">
+
+                <img src="./Ic.png" alt="HTML">
+
+                <h3>
+                    💻 Figure: HTML
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Code With Ajit. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

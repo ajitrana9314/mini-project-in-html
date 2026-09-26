@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Code With Ajit</title>
+
+    <style>
+
+        /* ---------- BASIC ---------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(135deg, #06142e, #0b3d91, #00a8ff);
+
+            color: white;
+            line-height: 1.7;
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            margin: 15px;
+            padding: 15px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(12px);
+
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.25);
+
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+
+
+        /* ---------- LOGO ---------- */
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 2px solid white;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            display: flex;
+            gap: 8px;
+
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        nav a {
+            color: white;
+
+            text-decoration: none;
+
+            padding: 9px 14px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+            background: white;
+
+            color: #0755b5;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------- MAIN ---------- */
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 40px auto;
+        }
+
+
+        /* ---------- PAGE TITLE ---------- */
+
+        .page-title {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+
+        .page-title h1 {
+            font-size: 48px;
+
+            margin-bottom: 5px;
+
+            background:
+                linear-gradient(90deg, #ffffff, #8ed8ff);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .page-title p {
+            color: #dcecff;
+
+            font-size: 18px;
+        }
+
+
+        /* ---------- PROFILE CARD ---------- */
+
+        .profile-card {
+            padding: 30px;
+
+            margin-bottom: 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(15px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.2);
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .profile-card h2 {
+            margin: 5px 0;
+
+            font-size: 32px;
+        }
+
+
+        .profile-card .role {
+            color: #a9e7ff;
+
+            font-size: 18px;
+        }
+
+
+        /* ---------- CONTENT CARD ---------- */
+
+        .card {
+            padding: 28px;
+
+            margin-bottom: 25px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            backdrop-filter: blur(12px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.18);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.20);
+
+            transition: 0.3s;
+        }
+
+
+        .card:hover {
+            transform: translateY(-3px);
+
+            background:
+                rgba(255, 255, 255, 0.14);
+        }
+
+
+        .card h2 {
+            color: #ffffff;
+
+            font-size: 27px;
+
+            margin-top: 0;
+
+            border-left: 5px solid #00d4ff;
+
+            padding-left: 12px;
+        }
+
+
+        .card h3 {
+            color: #8ed8ff;
+
+            font-size: 21px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .card h4 {
+            color: #00d4ff;
+
+            font-size: 19px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .card p {
+            color: #e4f3ff;
+
+            font-size: 16px;
+        }
+
+
+        /* ---------- SKILLS ---------- */
+
+        .skills {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-top: 15px;
+        }
+
+
+        .skill {
+            padding: 9px 16px;
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.25);
+
+            border-radius: 25px;
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+
+        .skill:hover {
+            background: white;
+
+            color: #0755b5;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* ---------- PROJECTS ---------- */
+
+        .project {
+            padding: 20px;
+
+            margin: 15px 0;
+
+            background:
+                rgba(0, 0, 0, 0.15);
+
+            border-radius: 15px;
+
+            border-left: 4px solid #00d4ff;
+        }
+
+
+        .project h3 {
+            margin-top: 0;
+        }
+
+
+        /* ---------- LIST ---------- */
+
+        ul {
+            padding-left: 25px;
+        }
+
+
+        li {
+            margin: 7px 0;
+
+            color: #e4f3ff;
+        }
+
+
+        /* ---------- CONTACT ---------- */
+
+        .contact-box {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 15px;
+
+            margin-top: 20px;
+        }
+
+
+        .contact-item {
+            padding: 18px;
+
+            background:
+                rgba(255, 255, 255, 0.10);
+
+            border-radius: 15px;
+
+            border:
+                1px solid rgba(255, 255, 255, 0.15);
+        }
+
+
+        .contact-item strong {
+            color: #8ed8ff;
+        }
+
+
+        /* ---------- THANK YOU ---------- */
+
+        .thank-you {
+            text-align: center;
+
+            font-size: 24px;
+
+            color: #ffffff;
+
+            padding: 30px;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            margin-top: 50px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background:
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        footer hr {
+            border: none;
+
+            height: 1px;
+
+            background:
+                rgba(255, 255, 255, 0.3);
+        }
+
+
+        footer p {
+            color: #dcecff;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+
+            nav {
+                width: 100%;
+            }
+
+
+            nav a {
+                padding: 8px 10px;
+
+                font-size: 14px;
+            }
+
+
+            main {
+                width: 94%;
+
+                margin-top: 25px;
+            }
+
+
+            .page-title h1 {
+                font-size: 38px;
+            }
+
+
+            .profile-card,
+            .card {
+                padding: 20px;
+            }
+
+
+            .card h2 {
+                font-size: 23px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="./index.html">
+
+                <img src="./image.png"
+                     alt="Code With Ajit">
+
+            </a>
+
+            <span>Code With Ajit</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="./index.html">Home</a>
+
+            <a href="./about.html">About</a>
+
+             <a href="./projects.html">Projects</a>
+
+            <a href="./contact.html">Contact</a>
+
+            <a href="./media.html">Media</a>
+
+            <a href="./login.html">Login</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main>
+
+
+        <!-- TITLE -->
+
+        <div class="page-title">
+
+            <h1>About Me</h1>
+
+            <p>
+                Get to know me, my skills, projects and career goals.
+            </p>
+
+        </div>
+
+
+
+        <!-- PROFILE -->
+
+        <div class="profile-card">
+
+            <h2>AJIT RANA</h2>
+
+            <div class="role">
+                BCA Student | Web Developer | Programmer
+            </div>
+
+        </div>
+
+
+
+        <!-- ABOUT ME -->
+
+        <div class="card">
+
+            <h2>About Me</h2>
+
+            <p>
+                Hello! My name is Ajit Rana, and I am a
+                Bachelor of Computer Applications (BCA) student
+                with a strong interest in computer science,
+                web development, programming, and modern technology.
+            </p>
+
+            <p>
+                I enjoy learning new technologies and using
+                my knowledge to create useful and creative
+                digital projects.
+            </p>
+
+            <p>
+                My journey in technology started with learning
+                the fundamentals of computers and programming.
+                Gradually, I developed an interest in creating
+                websites and applications.
+            </p>
+
+            <p>
+                I believe that practical experience is one of
+                the best ways to improve programming skills,
+                so I regularly work on small projects and
+                practice different programming concepts.
+            </p>
+
+            <p>
+                I am a curious and hardworking learner who enjoys
+                solving problems through technology.
+            </p>
+
+        </div>
+
+
+
+        <!-- EDUCATION -->
+
+        <div class="card">
+
+            <h2>Education</h2>
+
+            <p>
+                I am currently pursuing a Bachelor of Computer
+                Applications (BCA).
+            </p>
+
+            <p>
+                During my studies, I am learning various subjects
+                related to computer science and information technology.
+            </p>
+
+            <p>
+                My academic subjects include programming,
+                database management systems, data structures,
+                object-oriented programming, digital systems,
+                multimedia, environmental studies, mathematics,
+                and computer networking.
+            </p>
+
+            <p>
+                These subjects help me understand both the
+                theoretical and practical sides of computer
+                applications.
+            </p>
+
+        </div>
+
+
+
+        <!-- TECHNICAL SKILLS -->
+
+        <div class="card">
+
+            <h2>My Technical Skills</h2>
+
+            <p>
+                I have been developing my skills in several
+                programming languages and technologies.
+            </p>
+
+
+            <div class="skills">
+
+                <span class="skill">HTML</span>
+
+                <span class="skill">CSS</span>
+
+                <span class="skill">JavaScript</span>
+
+                <span class="skill">C</span>
+
+                <span class="skill">C++</span>
+
+                <span class="skill">Java</span>
+
+                <span class="skill">SQL</span>
+
+                <span class="skill">Node.js</span>
+
+                <span class="skill">Express.js</span>
+
+                <span class="skill">MongoDB</span>
+
+            </div>
+
+
+            <h3>HTML</h3>
+
+            <p>
+                HTML is one of the first technologies I learned
+                for creating websites. I can create webpages using
+                headings, paragraphs, images, links, tables,
+                forms, multimedia elements, lists, and other
+                HTML elements.
+            </p>
+
+
+            <h3>CSS</h3>
+
+            <p>
+                I use CSS to improve the appearance and design
+                of webpages. I can work with colors, backgrounds,
+                borders, fonts, spacing, layouts, and responsive
+                designs.
+            </p>
+
+
+            <h3>JavaScript</h3>
+
+            <p>
+                JavaScript is useful for making websites interactive.
+                I am learning how to use JavaScript to handle
+                buttons, forms, user interactions, calculations,
+                and dynamic webpage features.
+            </p>
+
+
+            <h3>C Programming</h3>
+
+            <p>
+                I have studied C programming and practiced important
+                concepts such as variables, operators, conditional
+                statements, loops, arrays, strings, pointers,
+                functions, recursion, structures, file handling,
+                stacks, queues, linked lists, and sorting techniques.
+            </p>
+
+
+            <h3>C++</h3>
+
+            <p>
+                I am also learning C++ and object-oriented
+                programming concepts such as classes, objects,
+                inheritance, polymorphism, encapsulation,
+                and abstraction.
+            </p>
+
+
+            <h3>Java</h3>
+
+            <p>
+                I have experience practicing Java programming
+                concepts including variables, input handling,
+                classes, inheritance, interfaces, exception
+                handling, and basic programming logic.
+            </p>
+
+
+            <h3>Database</h3>
+
+            <p>
+                I have studied database concepts and SQL.
+                I understand basic database operations such as
+                creating tables, inserting data, updating records,
+                deleting records, and retrieving information
+                using queries.
+            </p>
+
+        </div>
+
+
+
+        <!-- WEB DEVELOPMENT -->
+
+        <div class="card">
+
+            <h2>Web Development</h2>
+
+            <p>
+                Web development is one of my major areas of interest.
+                I enjoy creating webpages and experimenting with
+                different layouts and designs.
+            </p>
+
+            <p>
+                I have practiced creating navigation menus,
+                multimedia webpages, forms, tables, image sections,
+                background designs, and responsive layouts.
+            </p>
+
+            <p>
+                My goal is to learn modern frontend and backend
+                technologies so that I can build complete
+                web applications.
+            </p>
+
+        </div>
+
+
+
+        <!-- PROJECTS -->
+
+        <div class="card">
+
+            <h2>My Projects</h2>
+
+
+            <div class="project">
+
+                <h3>1. Personal Portfolio Website</h3>
+
+                <p>
+                    My portfolio website is designed to present
+                    my education, skills, projects, interests,
+                    and contact information in one place.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>2. Social Media Application</h3>
+
+                <p>
+                    I am also interested in developing a social
+                    media application. The project includes
+                    features such as user registration, login,
+                    posts, likes, comments, profile management,
+                    and user information.
+                </p>
+
+                <p>
+                    For the backend, I have worked with Node.js,
+                    Express, and MongoDB.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>3. HTML Practice Projects</h3>
+
+                <p>
+                    I have created several HTML practice projects
+                    to understand the fundamentals of web development.
+                    These include webpages using images, links,
+                    tables, forms, background colors, audio,
+                    and video.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STRENGTHS -->
+
+        <div class="card">
+
+            <h2>My Strengths</h2>
+
+            <p>
+                One of my biggest strengths is my willingness
+                to learn.
+            </p>
+
+            <ul>
+
+                <li>Quick learning ability</li>
+
+                <li>Problem-solving skills</li>
+
+                <li>Programming interest</li>
+
+                <li>Creativity</li>
+
+                <li>Practical learning</li>
+
+                <li>Teamwork</li>
+
+                <li>Consistency</li>
+
+                <li>Willingness to learn new technologies</li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- CAREER GOAL -->
+
+        <div class="card">
+
+            <h2>My Career Goal</h2>
+
+            <p>
+                My long-term career goal is to become a
+                professional software and web developer.
+            </p>
+
+            <p>
+                I want to gain strong knowledge of frontend
+                development, backend development, databases,
+                APIs, and modern software technologies.
+            </p>
+
+            <p>
+                I also want to work on real-world projects
+                that solve practical problems.
+            </p>
+
+        </div>
+
+
+
+        <!-- INTERESTS -->
+
+        <div class="card">
+
+            <h2>My Interests</h2>
+
+            <p>
+                Apart from academics, I enjoy exploring technology
+                and experimenting with different computer projects.
+            </p>
+
+            <p>
+                I am particularly interested in websites,
+                applications, programming, artificial intelligence,
+                and new developments in the technology industry.
+            </p>
+
+            <p>
+                I also like designing webpages and experimenting
+                with different layouts, colors, images, and
+                user interfaces.
+            </p>
+
+        </div>
+
+
+
+        <!-- LEARNING PHILOSOPHY -->
+
+        <div class="card">
+
+            <h2>My Learning Philosophy</h2>
+
+            <p>
+                I believe that every error is an opportunity
+                to learn something new.
+            </p>
+
+            <p>
+                My learning approach is simple:
+                learn the concept, practice it, build something
+                with it, find mistakes, and improve the project.
+            </p>
+
+            <p>
+                I believe that consistency is more important
+                than learning everything at once.
+            </p>
+
+        </div>
+
+
+
+        <!-- FUTURE PLANS -->
+
+        <div class="card">
+
+            <h2>Future Plans</h2>
+
+            <p>
+                In the future, I plan to improve my knowledge
+                of full-stack web development.
+            </p>
+
+            <p>
+                I want to become comfortable with frontend
+                technologies such as HTML, CSS, and JavaScript
+                and backend technologies such as Node.js,
+                Express, and databases.
+            </p>
+
+            <p>
+                I also want to explore areas such as artificial
+                intelligence, machine learning, cybersecurity,
+                cloud computing, and mobile application development.
+            </p>
+
+        </div>
+
+
+
+        <!-- CONCLUSION -->
+
+        <div class="card">
+
+            <h2>Conclusion</h2>
+
+            <p>
+                Thank you for visiting my portfolio.
+                This website represents my learning journey,
+                technical interests, projects, and career goals.
+            </p>
+
+            <p>
+                I am still learning and improving every day.
+                My goal is not only to learn programming languages
+                but also to understand how technology can be used
+                to solve real-world problems.
+            </p>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="card">
+
+            <h2>Contact</h2>
+
+
+            <div class="contact-box">
+
+                <div class="contact-item">
+                    <strong>Name</strong>
+                    <br>
+                    Ajit Rana
+                </div>
+
+
+                <div class="contact-item">
+                    <strong>Education</strong>
+                    <br>
+                    Bachelor of Computer Applications (BCA)
+                </div>
+
+
+                <div class="contact-item">
+                    <strong>Field</strong>
+                    <br>
+                    Computer Science & Web Development
+                </div>
+
+
+                <div class="contact-item">
+                    <strong>Skills</strong>
+                    <br>
+                    HTML, CSS, JavaScript, C, C++, Java,
+                    Node.js, MongoDB
+                </div>
+
+
+                <div class="contact-item">
+                    <strong>Interests</strong>
+                    <br>
+                    Web Development, Programming,
+                    Technology, Artificial Intelligence
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- THANK YOU -->
+
+        <div class="thank-you">
+
+            🚀 Thank You for Visiting My Portfolio!
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Code With Ajit. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

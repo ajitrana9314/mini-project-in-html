@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Media - Code With Ajit</title>
+
+
+    <style>
+        /* ---------- BASIC ---------- */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            background:
+                linear-gradient(135deg,
+                    #06142e,
+                    #0b3d91,
+                    #00a8ff);
+        }
+
+
+        /* ---------- HEADER ---------- */
+
+        header {
+
+            margin: 15px;
+
+            padding: 15px 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            background:
+                rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(12px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.2);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px rgba(0, 0, 0, 0.25);
+
+            position: sticky;
+
+            top: 10px;
+
+            z-index: 100;
+        }
+
+
+        /* ---------- LOGO ---------- */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+        }
+
+
+        .logo img {
+
+            width: 45px;
+
+            height: 45px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            border: 2px solid white;
+        }
+
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+
+            display: flex;
+
+            gap: 8px;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 9px 14px;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+
+        nav a:hover {
+
+            background: white;
+
+            color: #0755b5;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ---------- MAIN ---------- */
+
+        main {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 45px auto;
+        }
+
+
+        /* ---------- TITLE ---------- */
+
+        .title {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+
+        .title h1 {
+
+            font-size: 48px;
+
+            margin-bottom: 8px;
+
+            background:
+                linear-gradient(90deg,
+                    #ffffff,
+                    #8ed8ff);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .title p {
+
+            font-size: 18px;
+
+            color: #dcecff;
+        }
+
+
+        /* ---------- MEDIA CARD ---------- */
+
+        .media-card {
+
+            margin-bottom: 25px;
+
+            padding: 30px;
+
+            background:
+                rgba(255, 255, 255, 0.11);
+
+            backdrop-filter: blur(15px);
+
+            border:
+                1px solid rgba(255, 255, 255, 0.20);
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.25);
+
+            transition: 0.3s;
+        }
+
+
+        .media-card:hover {
+
+            transform: translateY(-4px);
+
+            background:
+                rgba(255, 255, 255, 0.15);
+        }
+
+
+        .media-card h2 {
+
+            margin-top: 0;
+
+            font-size: 25px;
+
+            border-left:
+                5px solid #00d4ff;
+
+            padding-left: 12px;
+        }
+
+
+        .media-card p {
+
+            color: #dcecff;
+
+            line-height: 1.6;
+        }
+
+
+        /* ---------- AUDIO ---------- */
+
+        audio {
+
+            width: 100%;
+
+            max-width: 650px;
+
+            margin-top: 10px;
+        }
+
+
+        /* ---------- VIDEO ---------- */
+
+        .video-box {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 15px;
+        }
+
+
+        video {
+
+            width: 100%;
+
+            max-width: 650px;
+
+            height: auto;
+
+            border-radius: 15px;
+
+            border:
+                2px solid rgba(255, 255, 255, 0.25);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+
+            background: black;
+        }
+
+
+        /* ---------- YOUTUBE ---------- */
+
+        .youtube-box {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 700px;
+
+            margin: 20px auto 0;
+
+            aspect-ratio: 16 / 9;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+
+        .youtube-box iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;
+        }
+
+
+        /* ---------- MEDIA NUMBER ---------- */
+
+        .number {
+
+            display: inline-block;
+
+            width: 35px;
+
+            height: 35px;
+
+            line-height: 35px;
+
+            text-align: center;
+
+            margin-right: 8px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            color: #0755b5;
+
+            font-weight: bold;
+        }
+
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+
+            margin-top: 60px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background:
+                rgba(0, 0, 0, 0.25);
+        }
+
+
+        footer hr {
+
+            border: none;
+
+            height: 1px;
+
+            background:
+                rgba(255, 255, 255, 0.3);
+        }
+
+
+        footer p {
+
+            color: #dcecff;
+
+            margin: 10px 0;
+        }
+
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 700px) {
+
+            header {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+
+            nav {
+
+                width: 100%;
+            }
+
+
+            nav a {
+
+                padding: 8px 10px;
+
+                font-size: 14px;
+            }
+
+
+            main {
+
+                width: 94%;
+
+                margin-top: 30px;
+            }
+
+
+            .title h1 {
+
+                font-size: 38px;
+            }
+
+
+            .media-card {
+
+                padding: 20px;
+            }
+
+
+            .media-card h2 {
+
+                font-size: 21px;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <a href="./index.html">
+
+                <img src="./image.png" alt="Code With Ajit">
+
+            </a>
+
+            <span>
+                Code With Ajit
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="./index.html">
+                Home
+            </a>
+
+            <a href="./about.html">
+                About
+            </a>
+
+             <a href="./projects.html">Projects</a>
+
+            <a href="./contact.html">
+                Contact
+            </a>
+
+            <a href="./media.html">
+                Media
+            </a>
+
+            <a href="./login.html">
+                Login
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main>
+
+
+        <!-- TITLE -->
+
+        <div class="title">
+
+            <h1>
+                HTML Multimedia
+            </h1>
+
+            <p>
+                Explore Audio, Video and Embedded Media
+            </p>
+
+        </div>
+
+
+
+        AUDIO SECTION
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">1</span>
+                Simple Audio
+            </h2>
+
+            <p>
+                Basic HTML audio player with controls.
+            </p>
+
+            <audio src="./audio.mp3" controls>
+            </audio>
+
+        </div>
+
+
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">2</span>
+                Auto Play Audio
+            </h2>
+
+            <p>
+                Audio starts automatically in muted mode.
+            </p>
+
+            <audio src="./audio.mp3" controls autoplay muted>
+            </audio>
+
+        </div>
+
+
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">3</span>
+                Loop Audio
+            </h2>
+
+            <p>
+                Audio repeats automatically after finishing.
+            </p>
+
+            <audio src="./audio.mp3" controls loop>
+            </audio>
+
+        </div>
+
+
+
+        VIDEO SECTION
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">4</span>
+                Simple Video
+            </h2>
+
+            <p>
+                Basic HTML video player with controls.
+            </p>
+
+
+            <div class="video-box">
+
+                <video src="./video.mp4" controls>
+                </video>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">5</span>
+                Auto Play Video
+            </h2>
+
+            <p>
+                Video automatically starts in muted mode.
+            </p>
+
+
+            <div class="video-box">
+
+                <video src="./video.mp4" controls autoplay muted>
+                </video>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">6</span>
+                Loop Video
+            </h2>
+
+            <p>
+                Video automatically repeats after finishing.
+            </p>
+
+
+            <div class="video-box">
+
+                <video src="./video.mp4" controls loop>
+                </video>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- <div class="media-card">
+
+            <h2>
+                <span class="number">7</span>
+                Video with Poster
+            </h2>
+
+            <p>
+                This video displays a poster image before playback.
+            </p>
+
+
+            <div class="video-box">
+
+                <video src="./video.mp4" controls poster="./poster.jpg">
+                </video>
+
+            </div>
+
+        </div> -->
+
+        
+
+        <!-- <div class="media-card">
+
+            <h2>
+                <span class="number">7</span>
+                CHHAAAVA BOLLYWOOD HINDI MOVIE
+            </h2>
+            <p>The film is based on the life of Sambhaji, the second ruler of the Maratha Empire</p>
+            <div class="video-box">
+
+                <video src="./movie.mp4" controls poster="./img.png">
+                </video>
+
+            </div>
+
+        </div>
+        <div class="media-card">
+
+            <h2>
+                <span class="number">7</span>
+                    PUSHPA 2 BOLLYWOOD HINDI MOVIE
+            </h2>
+            <p>The film stars Allu Arjun in the titular role, alongside Rashmika Mandanna</p>
+            <div class="video-box">
+
+                <video src="./Pushpa 2 - The Rule (2024) (Hindi ORG. AAC2.0-192Kbps + Tamil) Dual Audio UnCut South Movie HDRip 1080p WEB-DL.mkv" controls poster="./ChatGPT Image Sep 25, 2026, 08_51_48 PM.png">
+                </video>
+
+            </div>
+
+        </div>
+ -->
+
+
+        <!-- YOUTUBE -->
+
+        <div class="media-card">
+
+            <h2>
+                <span class="number">8</span>
+                Embedded Video
+            </h2>
+
+            <p>
+                YouTube video embedded using an HTML iframe.
+            </p>
+
+
+            <div class="youtube-box">
+
+                <iframe src="https://www.youtube.com/embed/tdHzl4L8gFs" title="YouTube video player" allow="
+                        accelerometer;
+                        autoplay;
+                        clipboard-write;
+                        encrypted-media;
+                        gyroscope;
+                        picture-in-picture;
+                        web-share" allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            © 2026 Code With Ajit.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
